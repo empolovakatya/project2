@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 import data
 from data import tours
-import random
 
 app = Flask(__name__)
 
@@ -36,4 +35,5 @@ def render_tour(id):
     tour = tours.get(int(id))
     return render_template('tour.html', tour = tour)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
